@@ -1,0 +1,185 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* MacOS Menu Bar */
+.mac-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: #2c2c2c;
+    color: #d3d3d3;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Left and Right Containers */
+.mac-menu .left {
+    display: flex;
+    align-items: center;
+}
+.mac-menu .right {
+    display: flex;
+    align-items: center;
+}
+
+/* Apple Icon */
+.apple-icon {
+    width: 18px;
+    margin-right: 10px;
+    color: white;
+}
+
+/* Time Positioning */
+.mac-menu #time {
+    font-family: 'San Francisco', sans-serif;
+    color: #b0b0b0;
+    position: relative;
+    top: 1px; /* Adjust this value as needed for better alignment */
+    left: 8px;
+    margin-right: 10px;
+}
+
+/* Icons in the Right Section */
+.mac-menu .menu-icon {
+    width: 16px;
+    margin-left: 10px;
+}
+
+/* Dock */
+.dock {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    padding: 10px;
+    background: rgba(219, 219, 219, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    z-index: 100;
+    opacity: 1;
+}
+.dock-icon img {
+    width: 50px;
+    margin: 0 10px; 
+    transition: transform 0.2s;
+}
+.dock-icon img:hover {
+    transform: scale(1.2);
+}
+
+/* Folder */
+.folder {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.folder img {
+    width: 60px;
+}
+.folder span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+/* Window */
+.window {
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+.window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+.window-header {
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: move;
+}
+.window-buttons img {
+    width: 12px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.window-title {
+    margin-left: 10px;
+    color: #5a5a5a;
+    font-family: 'San Francisco', sans-serif;
+}
+.window-content {
+    padding: 15px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5a5a5a;
+}
+.project {
+    text-align: center;
+    margin: 15px;
+}
+.project-icon {
+    width: 60px;
+    margin-bottom: 5px;
+}
+.project span {
+    font-size: 12px;
+    display: block;
+}
+.project a {
+    text-decoration: none;
+    color: #007aff;
+}
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Resizable Window */
+.resizable {
+    resize: both;
+    overflow: auto;
+}
+.resize-handle {
+    width: 10px;
+    height: 10px;
+    background: #b0b0b0;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: nwse-resize;
+}

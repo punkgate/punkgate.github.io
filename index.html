@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punkgate-Js-Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- MacOS Menu Bar -->
+  <div class="mac-menu">
+    <div class="left">
+        <img src="images/apple-icon.png" alt="Apple Icon" class="apple-icon">
+    </div>
+    <div class="right">
+        <img src="images/wifi-icon.png" alt="WiFi Icon" class="menu-icon">
+        <img src="images/battery-icon.png" alt="Battery Icon" class="menu-icon">
+        <span id="time"></span>
+    </div>
+</div>
+
+
+  <!-- Dock at Bottom -->
+  <div class="dock">
+    <div class="dock-icon"><img src="images/finder-icon.png" alt="Finder Icon"></div>
+    <div class="dock-icon"><img src="images/safari-icon.png" alt="Safari Icon"></div>
+    <div class="dock-icon"><img src="images/mail-icon.png" alt="Mail Icon"></div>
+    <div class="dock-icon"><img src="images/music-icon.png" alt="Music Icon"></div>
+    <div class="dock-icon"><img src="images/settings-icon.png" alt="Settings Icon"></div>
+  </div>
+
+  <!-- Folder Icon -->
+  <div class="folder" id="folder">
+    <img src="images/folder-icon.png" alt="Folder Icon">
+    <span>Projects</span>
+  </div>
+
+  <!-- Projects Folder Window (Initially Hidden) -->
+  <div class="window" id="projectsWindow" style="display: none;">
+    <div class="window-header">
+      <div class="window-buttons">
+        <img src="images/close-button.png" class="close-button" alt="Close" onclick="toggleWindow()">
+        <img src="images/minimize-button.png" class="minimize-button" alt="Minimize">
+        <img src="images/maximize-button.png" class="maximize-button" alt="Maximize">
+      </div>
+      <span class="window-title">JavaScript Projects by Sam</span>
+    </div>
+    <div class="window-content">
+      <div class="project">
+        <img src="images/video-icon.png" alt="Video to ASCII Icon" class="project-icon">
+        <span><a href="https://punkgate.github.io/VideoToASCII/" target="_blank">ASCII Video</a></span>
+      </div>
+      <div class="project">
+        <img src="images/raytracing-icon.png" alt="Ray Tracing Icon" class="project-icon">
+        <span><a href="https://punkgate.github.io/RayTracing2D/" target="_blank">Ray Tracing</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
